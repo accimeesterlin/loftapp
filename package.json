@@ -1,0 +1,41 @@
+{
+  "name": "loftapp",
+  "version": "1.0.0",
+  "description": "An App for Ann Taylor LOFT employees to check their schedule, post requests, and upload pictures",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack -w & nodemon server.js"
+
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manderson55/loftApp.git"
+  },
+  "keywords": [
+    "LOFT",
+    "Schedule"
+  ],
+  "author": "MZA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manderson55/loftApp/issues"
+  },
+  "homepage": "https://github.com/Manderson55/loftApp#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5",
+    "mongoose": "^4.11.13",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2"
+  }
+}

@@ -1,0 +1,33 @@
+body {
+panel-heading
+}
+
+.jumbotron {
+	background: url(../images/loft_flower_inspiration.jpeg) no-repeat center top;
+	margin-top: 60px;
+	padding-top:140px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 500px;
+	width: 100%;
+    background-size: cover;
+    color:Grey;
+}
+
+.jumbotron h3 {
+	color: black;
+}
+
+.btn-lg {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 20px;
+
+}
+
+.panel-heading {
+	background-color:  #ffe6ff;
+	text-align: center;
+	font-size: 30px;
+}
