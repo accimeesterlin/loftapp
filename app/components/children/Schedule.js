@@ -1,20 +1,36 @@
 var React = require("react");
-var Img = require("react-image");
+var reactPdf = require("react-pdf");
+//var Img = require("react-image");
 
+import { Document } from 'react-pdf/build/entry.webpack';
 // Create the Main component
 var Schedule = React.createClass({
 
+	getInitialState: function() {
+		return {
+			numPages: null
+		}
+	},
+
+	onDocumentLoad: function({numPages}) {
+		this.setState({ numPages});
+	},
+
+
   // Here we render the component
-  render: function() {
+  	render: function() {
 
-      return (
+      	return (
+
 	      	<div>
-	
-	      		Here I will display the weekly schedule :O
+	      		<Document
+	      			file="schedule.pdf"
+	      			onLoadSuccess={this.onDocumentLoad} />
+	      			
 	     	</div>
-      )
+     	)
 
-  }
+ 	}
 
 });
 

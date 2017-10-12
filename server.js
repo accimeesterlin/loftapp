@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 
 // Require  Schema
-var User = require('./models/Employees.js');
+var Employees = require('./models/Employees.js');
 
 // Create Instance of Express
 var app = express();
@@ -34,21 +34,32 @@ db.once("open", function() {
 });
 
 
-// 2. At the "/all" path, display every entry in the employees collection
-app.get("/all", function(req, res) {
-  // Query: In our database, go to the animals collection, then "find" everything
-  db.employees.find().sort({firstName: 1}, function(error, found) {
+// At the "/api" path, display every entry in the employees collection
+app.get("/api", function(req, res) {
+    console.log("inside app.get /api in server.js");
+  // Query: In our database, go to the employees collection, then "find" everything
+//
+    Employees.find({}, function(error, found) {
     // Log any errors if the server encounters one
-    if (error) {
-      console.log(error);
-    }
+        if (error) {
+            console.log(error);
+         }
     // Otherwise, send the result of this query to the browser
-    else {
-      res.json(found);
-      console.log(found);
-    }
-  });
+         else {
+             res.json(found);
+             console.log(found);
+         }
+    })
 });
+
+// This is the route we will send POST requests to save a new employee.
+// We will call this route when a user signs up
+app.post("/api", function(req, res) {
+
+   console.log("adding an employee! app.post");
+
+});
+
 
 
 // -------------------------------------------------

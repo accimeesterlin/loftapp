@@ -5,7 +5,7 @@ var axios = require("axios");
 module.exports = {
   // Returns a promise object we can .then() off inside our Parent component
   getEmployees: function() {
-    return axios.get("/all");
+    return axios.get("/api");
   },
   // This method takes in an argument for what to post to the database
   addEmployee: function(employee) {

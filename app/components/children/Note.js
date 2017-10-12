@@ -8,13 +8,19 @@ var Note = React.createClass({
 	getInitialState(){
 		return{editing: false}
 	},
-
+//this is not working, how do I determine the width and height of my component? They are rendering one 
+//of top of the other
 	componentWillMount() {
 		this.style = {
 			right: this.randomBetween(0, this.innerWidth - 150, "px"),
 			top: this.randomBetween(0, this.innerHeight - 150, "px")
 		}
 
+	},
+
+
+	randomBetween(x, y, s) {
+		return (x + Math.ceil(Math.random() * (y-x))) + s
 	},
 
 	componentDidUpdate(){
@@ -29,10 +35,6 @@ var Note = React.createClass({
 
 	// },
 
-	randomBetween(x, y, s) {
-		return (x + Math.ceil(Math.random() * (y-x))) + s
-	},
-
 	edit(){
 		this.setState({editing: true})
 	},
@@ -41,10 +43,13 @@ var Note = React.createClass({
 		this.props.onChange(this.refs.newText.value, this.props.id)
 		this.setState({editing: false})
 	},
+	//add the save to db here
 
 	remove(){
 		this.props.onRemove(this.props.id)
 	},
+	//add the delete from db here
+
 
 	handleCheck(){
 

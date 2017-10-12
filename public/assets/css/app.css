@@ -107,3 +107,7 @@ div.note > textarea {
 div.panelBodyWidthHeight {
   height: 1000px;
 }
+
+li {
+  font-weight: bold;
+}

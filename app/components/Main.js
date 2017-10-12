@@ -1,16 +1,36 @@
 // Include React
 var React = require("react");
 
-var Employees = require("./children/Employees");
+var EmployeeList = require("./children/EmployeeList");
 var BulletinBoard = require("./children/BulletinBoard");
 var Schedule = require("./children/Schedule");
+
+// Requiring our helper for making API calls
+var helpers = require("../utils/helpers");
 // Create the Main component
 var Main = React.createClass({
 //class Main extends React.Component ({
 
   getInitialState: function() {
-    return { employeeList: "", schedule: "", bulletinBoard: "" };
+    return { employeeList:[], schedule: "", bulletinBoard: "" };
   },
+
+  //  On load display the employees from  the DB
+  componentDidMount: function() {
+      console.log("COMPONENT MOUNTED in main.js");
+
+    // The moment the page renders on page load, we will retrieve the existing employees.
+      helpers.getEmployees()
+           .then(function(response) {
+                console.log("inside .then ");
+                console.log(response);
+         
+                if (response !== this.state.employeeList) {
+                    console.log("EmployeeList", response.data);
+                    this.setState({employeeList: response.data});
+                }
+           }.bind(this));
+    },
 
 
   // Here we render the component
@@ -39,9 +59,9 @@ var Main = React.createClass({
                  <div className="panel">
                       <div className="panel-heading ">Loft Girls</div>
                       <div className="panel-body">
-                            <Employees employeeList={this.state.employeeList}>
-                                Display all the registered employees with name, title and phone
-                            </Employees>
+                            <EmployeeList employeeList={this.state.employeeList}>
+
+                            </EmployeeList>
                       </div>
                  </div>
               </div>
