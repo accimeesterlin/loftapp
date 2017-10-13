@@ -24,7 +24,7 @@ var Schedule = React.createClass({
 
 	      	<div className="pdf-container">
 	      		<div>
-		      		<label for="file">Load from file:</label>
+		      		<label htmlFor="file">Load from file:</label>
 		      		<input type="file" />
 	      		</div>
 	      		<div className="pdf-document">
