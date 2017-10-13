@@ -29,10 +29,8 @@ var Schedule = React.createClass({
 	      		</div>
 	      		<div className="pdf-document">
 
-		      		<Document
-		      			file="schedule.pdf"
-		      			onLoadSuccess={this.onDocumentLoad} />
-	      			
+		      		<Document file="schedule.pdf" onLoadSuccess={this.onDocumentLoad}>
+	      			</Document>
 	     		</div>
 	     	</div>
      	)

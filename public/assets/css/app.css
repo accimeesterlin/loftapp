@@ -52,12 +52,13 @@ body {
 div.bulletinBoard {
   background-color:  #ffe6ea;
   width: 100%;
+  height:100%;
 }
 
 div.note {
-  height: 150px;
-  width: 150px;
-  background-color: #ff66ff;
+  height: 200px;
+  width: 200px;
+  background-color: #ffccff;
   margin: 2px 0;
   position: absolute;
   cursor: -webkit-grab;
@@ -71,9 +72,9 @@ div.note:active {
 
 div.note p {
   margin: 0;
-  font-size: 22px;
+  font-size: 25px;
   padding: 5px;
-  font-family: "Shadows Into Light", Arial;
+  font-family: "lucida", Arial;
 }
 
 div.note:hover > span {
@@ -98,10 +99,8 @@ div.note > textarea {
 }
 
 .bulletinBoard > button {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  font-size: 1.5em;
+  position: relative;
+  font-size: 2em;
 }
 
 div.panelBodyWidthHeight {

@@ -72,7 +72,7 @@ var BulletinBoard = React.createClass({
 		return (
 			<div className="bulletinBoard">
 				{this.state.notes.map(this.eachNote)}
-				<button onClick={() => this.add("New Note")}>+</button>
+				<button className="addNote" onClick={() => this.add("New Note")}>+</button>
 			</div>
 		)
 	}
