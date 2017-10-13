@@ -69,6 +69,11 @@ app.get("/", function(req, res) {
 });
 
 // -------------------------------------------------
+// app.get("/SignUp", function(req, res) {
+//   res.send("__dirname" + "/components/children/SignUp.js");
+// });
+
+// -------------------------------------------------
 
 // Listener
 app.listen(PORT, function() {

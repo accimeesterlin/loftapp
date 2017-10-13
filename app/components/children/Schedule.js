@@ -22,11 +22,18 @@ var Schedule = React.createClass({
 
       	return (
 
-	      	<div>
-	      		<Document
-	      			file="schedule.pdf"
-	      			onLoadSuccess={this.onDocumentLoad} />
+	      	<div className="pdf-container">
+	      		<div>
+		      		<label for="file">Load from file:</label>
+		      		<input type="file" />
+	      		</div>
+	      		<div className="pdf-document">
+
+		      		<Document
+		      			file="schedule.pdf"
+		      			onLoadSuccess={this.onDocumentLoad} />
 	      			
+	     		</div>
 	     	</div>
      	)
 

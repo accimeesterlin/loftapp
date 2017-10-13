@@ -1,9 +1,11 @@
 // Include React
 var React = require("react");
 
+
 var EmployeeList = require("./children/EmployeeList");
 var BulletinBoard = require("./children/BulletinBoard");
 var Schedule = require("./children/Schedule");
+//var SignUp = require("./children/SignUp");
 
 // Requiring our helper for making API calls
 var helpers = require("../utils/helpers");
@@ -53,6 +55,10 @@ var Main = React.createClass({
                 <button className = "btn-lg">SIGN OUT</button> 
             </div>
           </div>
+
+
+
+
 
           <div className="row">
               <div className="col-sm-6"> 

@@ -18,7 +18,6 @@ var Note = React.createClass({
 
 	},
 
-
 	randomBetween(x, y, s) {
 		return (x + Math.ceil(Math.random() * (y-x))) + s
 	},
