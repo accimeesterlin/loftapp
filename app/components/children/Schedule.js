@@ -4,21 +4,23 @@ var reactPdf = require("react-pdf");
 
 import { Document } from 'react-pdf/build/entry.webpack';
 // Create the Main component
-var Schedule = React.createClass({
+class Schedule extends React.Component{
 
-	getInitialState: function() {
-		return {
+	constructor(props) {
+	  super(props);
+	
+	  this.state = {
 			numPages: null
-		}
-	},
+	  }
+	}
 
-	onDocumentLoad: function({numPages}) {
+	onDocumentLoad(numPages) {
 		this.setState({ numPages});
-	},
+	}
 
 
   // Here we render the component
-  	render: function() {
+  	render() {
 
       	return (
 
@@ -36,8 +38,6 @@ var Schedule = React.createClass({
      	)
 
  	}
-
-});
-
+}
 // Export the component back for use in other files
-module.exports = Schedule;
+export default Schedule;
